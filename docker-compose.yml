@@ -1,0 +1,7 @@
+# Dokploy / production. Traefik reaches this service on container port 3000.
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    expose:
+      - "3000"
