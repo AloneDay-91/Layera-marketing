@@ -23,7 +23,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${geistMono.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
