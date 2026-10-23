@@ -3,7 +3,7 @@
 FROM node:24.22.1-slim AS deps
 WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@10.28.0 --activate
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile
 
 FROM node:24.22.1-slim AS builder
